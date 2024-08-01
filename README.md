@@ -1,7 +1,7 @@
 # UKSister24
 Ujian Khusus - Ilham
 
-Rincian TB terdiri dari
+Rincian Ujian Khusus terdiri dari
 
 1. Buat Folder Ujian Khusus (Judul Singkat) contoh : Penggunaan Pesan Antrian untuk komunikasi kolektif pada python
 2. Buat File Project + Readme untuk melengkapi deskripsi Ujian Khusus
