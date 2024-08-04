@@ -13,3 +13,10 @@ def send_message(message):
 
 # Main program
 print("Selamat datang di sistem pengiriman barang!")
+while True:
+    print("\nMenu:")
+    print("1. Cek status pengiriman")
+    print("2. Kirim barang")
+    print("3. Keluar")
+
+    choice = input("Pilih menu (1/2/3): ")
