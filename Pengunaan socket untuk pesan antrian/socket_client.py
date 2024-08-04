@@ -1,4 +1,3 @@
-# client.py
 import socket
 
 def send_message(message):
