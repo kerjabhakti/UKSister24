@@ -20,4 +20,18 @@ while True:
     print("Terhubung dengan %s:%d" % addr)
     print("Server terhubung dengan pengguna")
 
+    # Terima data dari klien
+    data = clientsocket.recv(1024).decode('ascii')
+
+    if data == 'kirim':
+        print("Memproses pengiriman...")
+
+       
+
+        response = "Barang telah berhasil dikirim!"
+        clientsocket.send(response.encode('ascii'))
+    else:
+        response = "Perintah tidak valid"
+        clientsocket.send(response.encode('ascii'))
+
     clientsocket.close()
