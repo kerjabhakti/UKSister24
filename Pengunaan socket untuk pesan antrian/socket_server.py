@@ -26,7 +26,7 @@ while True:
     if data == 'kirim':
         print("Memproses pengiriman...")
 
-       
+        time.sleep(3)
 
         response = "Barang telah berhasil dikirim!"
         clientsocket.send(response.encode('ascii'))
