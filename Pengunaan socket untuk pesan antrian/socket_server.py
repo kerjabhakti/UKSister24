@@ -29,20 +29,26 @@ while True:
 
     # Terima data dari klien
     data = clientsocket.recv(1024).decode('ascii')
-    command = data.split()[0]
+    command_parts = data.split()
+    command = command_parts[0]
 
     if command == 'KIRIM':
         print("Memproses pengiriman...")
 
         # Simulasi pembuatan nomor pelacakan
         tracking_number = str(random.randint(100000, 999999))
+        destination = command_parts[1]
+        weight = command_parts[2]
         time.sleep(3)
+
+        # Tambahkan data pelacakan baru
+        tracking_data[tracking_number] = f"Barang sedang dalam perjalanan ke {destination}, berat: {weight} kg"
 
         response = tracking_number
         clientsocket.send(response.encode('ascii'))
     
     elif command == 'CEK':
-        tracking_number = data.split()[1]
+        tracking_number = command_parts[1]
         response = tracking_data.get(tracking_number, 'Nomor pelacakan tidak ditemukan')
 
         clientsocket.send(response.encode('ascii'))
