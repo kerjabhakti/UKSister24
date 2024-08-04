@@ -25,3 +25,16 @@ while True:
         tracking_number = input("Masukkan nomor pelacakan: ")
         response = send_message(f"CEK {tracking_number}")
         print(f"Status pengiriman: {response}")
+
+    elif choice == "2":
+        destination = input("Masukkan alamat tujuan: ")
+        weight = input("Masukkan berat barang (kg): ")
+        response = send_message(f"KIRIM {destination} {weight}")
+        print(f"Barang berhasil dikirim. Nomor pelacakan: {response}")
+
+    elif choice == "3":
+        print("Terima kasih telah menggunakan layanan kami.")
+        break
+
+    else:
+        print("Menu tidak valid. Silakan pilih menu yang tersedia.")
