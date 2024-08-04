@@ -20,3 +20,8 @@ while True:
     print("3. Keluar")
 
     choice = input("Pilih menu (1/2/3): ")
+
+    if choice == "1":
+        tracking_number = input("Masukkan nomor pelacakan: ")
+        response = send_message(f"CEK {tracking_number}")
+        print(f"Status pengiriman: {response}")
