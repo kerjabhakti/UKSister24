@@ -6,7 +6,7 @@ def send_message(message):
     host = socket.gethostname()
     port = 9999
     s.connect((host, port))
-    s.sendall(message.encode('ascii'))
+    s.send_message(message.encode('ascii'))
     response = s.recv(1024)
     s.close()
     return response.decode('ascii')
