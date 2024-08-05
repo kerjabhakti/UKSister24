@@ -7,3 +7,4 @@ pada studi kasus ini membuat pengirman informasi barang antara client dan server
 - keluar command
 
 ## Video
+- https://youtu.be/8AKFk833shM
